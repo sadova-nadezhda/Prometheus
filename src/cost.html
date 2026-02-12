@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  @@include('html/head.html', { "title": "Стоимость обучения" })
+  <body>
+    @@include('html/header.html', { "class": "light" })
+
+    <main>
+      <section class="hero-blue hero-cost section-hidden">
+        <div class="container">
+          <div class="hero-blue__container">
+            <h1 class="hero-blue__title">Стоимость обучения</h1>
+          </div>
+        </div>
+      </section>
+      <section class="cost section-pad section-hidden">
+        <div class="container">
+          <div class="cost__container">
+            <div class="cost__wrap">
+              <div class="cost__cards">
+                <div class="cost__card cost-card lg">
+                  <div class="cost-card__top">
+                    <div class="cost-card__icon"><img src="@img/cost-icon-1.svg" alt=""></div>
+                    <div class="cost-card__caption color-blue">Pre-school</div>
+                  </div>
+                  <div class="cost-card__price"><span>2 520 000</span> ₸/в год</div>
+                  <div class="cost-card__bottom">Питание: <span>585 000 ₸ / год</span></div>
+                </div>
+                <div class="cost__card cost-card lg">
+                  <div class="cost-card__top">
+                    <div class="cost-card__icon"><img src="@img/cost-icon-2.svg" alt=""></div>
+                    <div class="cost-card__caption color-blue">Начальная школа</div>
+                  </div>
+                  <div class="cost-card__price"><span>3 510 000</span> ₸/в год</div>
+                  <div class="cost-card__bottom">Питание: <span>648 000 ₸ / год</span></div>
+                </div>
+                <div class="cost__card cost-card lg">
+                  <div class="cost-card__top">
+                    <div class="cost-card__icon"><img src="@img/cost-icon-3.svg" alt=""></div>
+                    <div class="cost-card__caption color-blue">Среднее звено</div>
+                  </div>
+                  <div class="cost-card__price"><span>3 510 000</span> ₸/в год</div>
+                  <div class="cost-card__bottom">Питание: <span>711 000 ₸ / год</span></div>
+                </div>
+              </div>
+              <div class="cost__box">
+                <h2 class="cost__title color-blue">Дополнительные расходы</h2>
+                <div class="cost__cards">
+                  <div class="cost__card cost-card light sm">
+                    <div class="cost-card__top">
+                      <div class="cost-card__icon"><img src="@img/cost-icon-4.svg" alt=""></div>
+                      <div class="cost-card__caption">Вступительный взнос</div>
+                    </div>
+                    <div class="cost-card__price">300 000 ₸</div>
+                    <div class="cost-card__txt">Единовременно, не возвращается</div>
+                  </div>
+                  <div class="cost__card cost-card light sm">
+                    <div class="cost-card__top">
+                      <div class="cost-card__icon"><img src="@img/cost-icon-5.svg" alt=""></div>
+                      <div class="cost-card__caption">Развозка от партнера UvU</div>
+                    </div>
+                    <div class="cost-card__price">от 500 000 ₸ / год</div>
+                    <div class="cost-card__txt">Зависит от маршрута</div>
+                  </div>
+                  <div class="cost__card cost-card light sm">
+                    <div class="cost-card__top">
+                      <div class="cost-card__icon"><img src="@img/cost-icon-6.svg" alt=""></div>
+                      <div class="cost-card__caption">Доп. услуги</div>
+                    </div>
+                    <div class="cost-card__price">По запросу</div>
+                    <div class="cost-card__txt">Кружки, секции</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cost__wrap">
+              <div class="cost__row">
+                <div class="cost__img"><img src="@img/cost-img-1.webp" alt=""></div>
+                <div class="cost__col">
+                  <div class="cost__caption color-blue">Развозка</div>
+                  <ul class="cost__list">
+                    <li>Безопасные комфортабельные автобусы с контролем маршрута</li>
+                    <li>Сопровождение опытными педагогами на всём маршруте</li>
+                    <li>Гибкие маршруты по всем районам города Алматы</li>
+                    <li>Онлайн-отслеживание автобуса в реальном времени</li>
+                  </ul>
+                  <a href="" class="cost__btn button button-primary button-arrow">
+                    <span>Получить консультацию по развозке</span>
+                    <div class="icon">
+                      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.57501 17.325L17.325 1.57495M17.325 1.57495H1.57501M17.325 1.57495V17.325" stroke="white" stroke-width="3.15" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="cost__row">
+                <div class="cost__img"><img src="@img/cost-img-2.webp" alt=""></div>
+                <div class="cost__col">
+                  <div class="cost__caption color-blue">Питание</div>
+                  <ul class="cost__list">
+                    <li>Свежие продукты от проверенных поставщиков, контроль качества</li>
+                    <li>Меню по сезону и возрасту, без перегруза сладким</li>
+                    <li>Контроль качества: поставщики, хранение, санитарные требования</li>
+                    <li>Уютная столовая и безопасная организация питания</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="cost__section">
+              <h2 class="cost__title color-blue">Гранты</h2>
+              <div class="cost__row">
+                <div class="cost__accordion accordion">
+                  <div class="accordion__item">
+                    <div class="accordion__head">
+                      <div class="accordion__caption color-blue">Кто может претендовать?</div>
+                      <div class="accordion__icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.5 15L12.5 10L7.5 5" stroke="#22326E" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="accordion__body">
+                      <div class="accordion__content">
+                        <ul>
+                          <li>Ученики с высоким академическим потенциалом</li>
+                          <li>Творчески или спортивно одарённые дети</li>
+                          <li>Дети, проявляющие инициативу и лидерские качества</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion__item">
+                    <div class="accordion__head">
+                      <div class="accordion__caption color-blue">Как получить грант?</div>
+                      <div class="accordion__icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.5 15L12.5 10L7.5 5" stroke="#22326E" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="accordion__body">
+                      <div class="accordion__content">
+                        <ul>
+                          <li>Ученики с высоким академическим потенциалом</li>
+                          <li>Творчески или спортивно одарённые дети</li>
+                          <li>Дети, проявляющие инициативу и лидерские качества</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion__item">
+                    <div class="accordion__head">
+                      <div class="accordion__caption color-blue">Важные моменты</div>
+                      <div class="accordion__icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.5 15L12.5 10L7.5 5" stroke="#22326E" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="accordion__body">
+                      <div class="accordion__content">
+                        <ul>
+                          <li>Ученики с высоким академическим потенциалом</li>
+                          <li>Творчески или спортивно одарённые дети</li>
+                          <li>Дети, проявляющие инициативу и лидерские качества</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cost__block">
+                  <img src="@img/cost-person.webp" alt="">
+                  <h2 class="admission__title">Гранты</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

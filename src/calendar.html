@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  @@include('html/head.html', { "title": "Школьный календарь" })
+  <body>
+    @@include('html/header.html', { "class": "light" })
+
+    <main>
+      <section class="hero-blue hero-cal section-hidden">
+        <div class="container">
+          <div class="hero-blue__container">
+            <h1 class="hero-blue__title">Школьный календарь</h1>
+          </div>
+        </div>
+      </section>
+      <section class="cal section-pad">
+        <div class="container">
+          <div class="cal__container">
+            <div class="cal__header">
+              <button class="icon-btn" id="prevMonth" aria-label="Предыдущий месяц">
+                <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 -2.18557e-07L2.18557e-07 5L5 10L5 -2.18557e-07Z" fill="#1D1B20"/>
+                </svg>
+              </button>
+              <div class="cal__title color-blue" id="monthTitle">Декабрь</div>
+              <button class="icon-btn" id="nextMonth" aria-label="Следующий месяц">
+                <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 -2.18557e-07L5 5L-4.37114e-07 10L0 -2.18557e-07Z" fill="#1D1B20"/>
+                </svg>
+              </button>
+            </div>
+            <div class="cal__grid">
+              <div class="cal__card">
+                <div class="cal__dow">
+                  <div>Пн</div>
+                  <div>Вт</div>
+                  <div>Ср</div>
+                  <div>Чт</div>
+                  <div>Пт</div>
+                  <div>Сб</div>
+                  <div>Вс</div>
+                </div>
+
+                <div class="cal__cells" id="calendarCells"></div>
+              </div>
+
+              <div class="cal__card">
+                <div class="list__header">
+                  <h2 class="list__title color-blue">События месяца</h2>
+                  <div class="cal__tabs" id="tabs"></div>
+                </div>
+
+                <div class="cal__list" id="eventsList" data-lenis-prevent></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const now = new Date();
+
+        const CATS = [
+          { key: "all",   label: "Все" },
+          { key: "study", label: "Учёба" },
+          { key: "event", label: "События" },
+          { key: "exam",  label: "Экзамены" },
+          { key: "club",  label: "Кружки" },
+        ];
+
+        // Цвета категорий
+        const CAT_COLOR = {
+          study: "#B17F4E",
+          event: "#22326E",
+          exam:  "#EF4444",
+          club:  "#F59E0B",
+        };
+
+        // Демо-события на текущий месяц
+        const y = now.getFullYear();
+        const m = String(now.getMonth() + 1).padStart(2, "0");
+
+        let events = [
+          { id: 1, title: "Хакатон", start: `${y}-${m}-12T10:00`, cat: "event", desc: "Объединяем современные технологии и свежие методики..." },
+          { id: 2, title: "Кружок шахмата", start: `${y}-${m}-12T16:00`, cat: "club",  desc: "Занятие шахматного кружка для начинающих и продвинутых." },
+          { id: 3, title: "Родительское собрание", start: `${y}-${m}-15T10:00`, cat: "event", desc: "Обсудим успехи учеников и планы на следующий семестр." },
+          { id: 4, title: "Экскурсия в музей", start: `${y}-${m}-18T10:00`, cat: "event", desc: "Познавательная поездка в исторический музей города." },
+          { id: 5, title: "Контрольная работа", start: `${y}-${m}-25T11:00`, cat: "exam",  desc: "Контрольная работа по теме месяца." },
+        ];
+
+        const els = {
+          monthTitle: document.getElementById("monthTitle"),
+          calendarCells: document.getElementById("calendarCells"),
+          eventsList: document.getElementById("eventsList"),
+          tabs: document.getElementById("tabs"),
+          prev: document.getElementById("prevMonth"),
+          next: document.getElementById("nextMonth"),
+        };
+
+        if (!els.monthTitle || !els.calendarCells || !els.eventsList || !els.tabs || !els.prev || !els.next) {
+          console.error("Не найдены элементы календаря. Проверь id в HTML:", els);
+          return;
+        }
+
+        let state = {
+          current: new Date(now.getFullYear(), now.getMonth(), 1),
+          cat: "all",
+        };
+
+        const pad2 = (n) => String(n).padStart(2, "0");
+        const toYMD = (d) => `${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}`;
+
+        function formatRuMonth(d){
+          return d.toLocaleDateString("ru-RU", { month:"long", year:"numeric" })
+            .replace(" г.", "")
+            .replace(/^./, (c)=>c.toUpperCase());
+        }
+
+        function sameMonth(d1, d2){
+          return d1.getFullYear()===d2.getFullYear() && d1.getMonth()===d2.getMonth();
+        }
+
+        function parseLocalISO(iso){
+          return new Date(iso);
+        }
+
+        function getMonthEvents(){
+          const cur = state.current;
+          const filtered = events.filter(ev => {
+            const dt = parseLocalISO(ev.start);
+            if (!sameMonth(dt, cur)) return false;
+            if (state.cat !== "all" && ev.cat !== state.cat) return false;
+            return true;
+          });
+          filtered.sort((a,b)=>parseLocalISO(a.start)-parseLocalISO(b.start));
+          return filtered;
+        }
+
+        function buildTabs(){
+          els.tabs.innerHTML = "";
+          CATS.forEach(c => {
+            const b = document.createElement("button");
+            b.className = "tab" + (state.cat===c.key ? " is-active" : "");
+            b.textContent = c.label;
+            b.addEventListener("click", ()=>{
+              state.cat = c.key;
+              render();
+            });
+            els.tabs.appendChild(b);
+          });
+        }
+
+        function renderCalendar(){
+          const d = new Date(state.current.getFullYear(), state.current.getMonth(), 1);
+          const year = d.getFullYear();
+          const month = d.getMonth();
+
+          els.monthTitle.textContent = formatRuMonth(d);
+
+          const jsDay = d.getDay();
+          const mondayIndex = (jsDay + 6) % 7;
+
+          const daysInMonth = new Date(year, month+1, 0).getDate();
+          const monthEvents = getMonthEvents();
+
+          const byDay = new Map();
+          for (const ev of monthEvents){
+            const dt = parseLocalISO(ev.start);
+            const key = toYMD(dt);
+            if (!byDay.has(key)) byDay.set(key, []);
+            byDay.get(key).push(ev);
+          }
+
+          els.calendarCells.innerHTML = "";
+
+          for (let i=0; i<mondayIndex; i++){
+            const cell = document.createElement("div");
+            cell.className = "day is-empty";
+            els.calendarCells.appendChild(cell);
+          }
+
+          for (let day=1; day<=daysInMonth; day++){
+            const cellDate = new Date(year, month, day);
+            const ymd = toYMD(cellDate);
+
+            const cell = document.createElement("div");
+            cell.className = "day";
+
+            const num = document.createElement("div");
+            num.className = "day__num";
+            num.textContent = day;
+
+            const wrap = document.createElement("div");
+            wrap.className = "day__events";
+
+            const dayEvents = byDay.get(ymd) || [];
+            const maxPills = 2;
+
+            dayEvents.slice(0, maxPills).forEach(ev=>{
+              const p = document.createElement("div");
+              p.className = "pill";
+              p.style.background = CAT_COLOR[ev.cat] || "#334155";
+              p.title = ev.title;
+              p.textContent = ev.title;
+              wrap.appendChild(p);
+            });
+
+            if (dayEvents.length > maxPills){
+              const more = document.createElement("div");
+              more.className = "pill more";
+              more.textContent = `+${dayEvents.length - maxPills}`;
+              wrap.appendChild(more);
+            }
+
+            const today = new Date();
+            const isToday =
+              cellDate.getFullYear() === today.getFullYear() &&
+              cellDate.getMonth() === today.getMonth() &&
+              cellDate.getDate() === today.getDate();
+
+            if (isToday) cell.classList.add("is-today");
+
+            cell.appendChild(num);
+            cell.appendChild(wrap);
+            els.calendarCells.appendChild(cell);
+          }
+        }
+
+        function renderList(){
+          const monthEvents = getMonthEvents();
+          els.eventsList.innerHTML = "";
+
+          if (!monthEvents.length){
+            const empty = document.createElement("div");
+            empty.className = "item";
+            empty.textContent = "Событий нет.";
+            els.eventsList.appendChild(empty);
+            return;
+          }
+
+          monthEvents.forEach(ev=>{
+            const dt = parseLocalISO(ev.start);
+            const dateStr = dt.toLocaleDateString("ru-RU", { day:"2-digit", month:"short" });
+            const timeStr = dt.toLocaleTimeString("ru-RU", { hour:"2-digit", minute:"2-digit" });
+
+            const item = document.createElement("div");
+            item.className = "item";
+
+            const top = document.createElement("div");
+            top.className = "item__top";
+
+            const left = document.createElement("div");
+
+            const dtEl = document.createElement("div");
+            dtEl.className = "item__dt";
+            dtEl.textContent = `${dateStr}  ${timeStr}`;
+
+            const title = document.createElement("div");
+            title.className = "item__title";
+            title.textContent = ev.title;
+
+            left.appendChild(dtEl);
+            left.appendChild(title);
+
+            const badge = document.createElement("div");
+            badge.className = "badge";
+            badge.style.background = CAT_COLOR[ev.cat] || "#334155";
+            badge.textContent = (CATS.find(c=>c.key===ev.cat)?.label) || "Событие";
+
+            top.appendChild(left);
+            top.appendChild(badge);
+
+            const desc = document.createElement("p");
+            desc.className = "item__desc";
+            desc.textContent = ev.desc || "";
+
+            item.appendChild(top);
+            item.appendChild(desc);
+            els.eventsList.appendChild(item);
+          });
+        }
+
+        function render(){
+          buildTabs();
+          renderCalendar();
+          renderList();
+        }
+
+        els.prev.addEventListener("click", ()=>{
+          state.current = new Date(state.current.getFullYear(), state.current.getMonth()-1, 1);
+          render();
+        });
+
+        els.next.addEventListener("click", ()=>{
+          state.current = new Date(state.current.getFullYear(), state.current.getMonth()+1, 1);
+          render();
+        });
+
+        render();
+      });
+    </script>
+
+    @@include('html/foot.html')
+  </body>
+</html>

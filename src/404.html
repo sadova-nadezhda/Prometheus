@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  @@include('html/head.html', { "title": "Страница не найдена" })
+  <body>
+    @@include('html/header.html', { "class": "" })
+
+    <main>
+      <section class="hero hero-error page-error section-hidden">
+        <div class="container">
+          <div class="hero__container page-error__container">
+            <img class="hero__bg" src="@img/404.webp" alt="" />
+            <div class="page-error__row">
+              <div class="page-error__group">
+                <h1 class="page-error__title">Страница не найдена</h1>
+                <div class="page-error__desc">Похоже, ссылка устарела или страница была перемещена.</div>
+              </div>
+            </div>
+            <a href="tour.html" class="page-error__btn button button-primary"><span>Вернуться на главную</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

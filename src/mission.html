@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  @@include('html/head.html', { "title": "Миссия и ценности" })
+  <body>
+    @@include('html/header.html', { "class": "light" })
+
+    <main>
+      <section class="hero-blue hero-mission section-hidden">
+        <div class="container">
+          <div class="hero-blue__container">
+            <h1 class="hero-blue__title">Миссия и ценности</h1>
+          </div>
+        </div>
+      </section>
+      <section class="mission section-pad section-hidden">
+        <div class="container">
+          <div class="mission__container">
+            <div class="mission__content">
+              <img src="@img/mission-img.webp" alt="">
+              <div class="mission__title">Высокое качество обучения</div>
+              <div class="mission__desc">мы задаём планку и держим её в каждом курсе и материале.</div>
+            </div>
+            <div class="mission__cards">
+              <div class="mission__card">
+                <div class="mission__caption color-blue">Инновационный подход</div>
+                <div class="mission__txt">объединяем современные технологии и свежие методики, чтобы обучение было актуальным.</div>
+              </div>
+              <div class="mission__card">
+                <div class="mission__caption color-blue">Ответственное обучение</div>
+                <div class="mission__txt">мы честны, прозрачны и соблюдаем обещания — в процессах и в отношениях.</div>
+              </div>
+              <div class="mission__card">
+                <div class="mission__caption color-blue">Поддержка на каждом шаге</div>
+                <div class="mission__txt">студенты не остаются одни: мы рядом от старта до результата.</div>
+              </div>
+              <div class="mission__card">
+                <div class="mission__caption color-blue">Развитие как основа роста</div>
+                <div class="mission__txt">мы растём сами и помогаем расти студентам, расширяя возможности и перспективы.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

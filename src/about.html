@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  @@include('html/head.html', { "title": "О школе" })
+  <body>
+    @@include('html/header.html', { "class": "" })
+
+    <main>
+      <section class="hero hero-about section-hidden">
+        <div class="container">
+          <div class="hero__container">
+            <!-- Приоритет на видео -->
+            <video autoplay muted loop class="back-video">
+              <source src="/files/hero.mp4" type="video/mp4">
+            </video>
+            <!-- Если видео не загрузили то выводить фото -->
+            <!-- <img class="hero__bg" src="@img/hero.gif" alt="" /> -->
+          </div>
+        </div>
+      </section>
+      <section class="about-momentous section-hidden">
+        <div class="container">
+          <div class="about-momentous__container">
+            <img src="@img/about-img-2.webp" alt="">
+            <div class="about-momentous__content">
+              <h2 class="about-momentous__title">Директор о том, что важно знать каждому студенту.</h2>
+              <a href="" class="about-momentous__button button-light">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 19V5L19 12L8 19Z" fill="white"/>
+                </svg>
+                <span>Смотреть</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about-cert section-pad section-hidden">
+        <div class="container">
+          <div class="about-cert__container">
+            <div class="about-cert__wrap">
+              <h2 class="about-cert__title color-blue">Лицензии / Сертификаты</h2>
+              <div class="about-cert__txt">Наши лицензии и сертификаты подтверждают высокий стандарт образования и профессионализм школы.</div>
+            </div>
+            <div class="about-cert__slider">
+              <div class="swiper certSwiper">
+                <div class="swiper-wrapper">
+                  <a class="swiper-slide about-cert__slide" href="@img/cert.webp" data-fancybox="cert"><img src="@img/cert.webp" alt=""></a>
+                  <a class="swiper-slide about-cert__slide" href="@img/cert-2.webp" data-fancybox="cert"><img src="@img/cert-2.webp" alt=""></a>
+                  <a class="swiper-slide about-cert__slide" href="@img/cert.webp" data-fancybox="cert"><img src="@img/cert.webp" alt=""></a>
+                  <a class="swiper-slide about-cert__slide" href="@img/cert-2.webp" data-fancybox="cert"><img src="@img/cert-2.webp" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

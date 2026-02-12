@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  @@include('html/head.html', { "title": "Активные вакансии" })
+  <body>
+    @@include('html/header.html', { "class": "light" })
+
+    <main>
+      <section class="hero-blue hero-vacancies section-hidden">
+        <div class="container">
+          <div class="hero-blue__container">
+            <h1 class="hero-blue__title">Активные вакансии</h1>
+          </div>
+        </div>
+      </section>
+      <section class="vacancies section-pad section-hidden">
+        <div class="container">
+          <div class="vacancies__container">
+            <div class="vacancies__cards">
+              <div class="vacancies__card">
+                <div class="vacancies__content">
+                  <h2 class="vacancies__caption color-blue">Преподаватель</h2>
+                  <div class="vacancies__desc">Мы ищем людей, которым важно не просто «вести предмет», а влиять на мышление учеников. <br> В Prometheus School преподаватель — это партнёр, наставник и участник развития школы, а не говорящая презентация.</div>
+                </div>
+                <div class="vacancies__box">
+                  <strong>Условия работы:</strong>
+                  <ul>
+                    <li>Работа с учениками в современной образовательной среде</li>
+                    <li>Участие в развитии программ и форматов обучения</li>
+                    <li>Поддержка, методическая база и команда единомышленников</li>
+                    <li>Формат работы: очный / гибридный / онлайн</li>
+                    <li>Возможность профессионального роста внутри школы</li>
+                  </ul>
+                </div>
+                <a href="" class="vacancies__button" target="_blank">Перейти на hh.kz</a>
+              </div>
+              <div class="vacancies__card">
+                <div class="vacancies__content">
+                  <h2 class="vacancies__caption color-blue">Преподаватель</h2>
+                  <div class="vacancies__desc">Мы ищем людей, которым важно не просто «вести предмет», а влиять на мышление учеников. <br> В Prometheus School преподаватель — это партнёр, наставник и участник развития школы, а не говорящая презентация.</div>
+                </div>
+                <div class="vacancies__box">
+                  <strong>Условия работы:</strong>
+                  <ul>
+                    <li>Работа с учениками в современной образовательной среде</li>
+                    <li>Участие в развитии программ и форматов обучения</li>
+                    <li>Поддержка, методическая база и команда единомышленников</li>
+                    <li>Формат работы: очный / гибридный / онлайн</li>
+                    <li>Возможность профессионального роста внутри школы</li>
+                  </ul>
+                </div>
+                <a href="" class="vacancies__button" target="_blank">Перейти на hh.kz</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="feedback feedback-mg section-hidden">
+        <img src="@img/feedback-img.webp" alt="">
+        <div class="container">
+          <div class="feedback__container">
+            <div class="feedback__content">
+              <h2 class="feedback__ttile">Сделайте первый шаг к <br> поступлению в Prometheus School</h2>
+              <div class="feedback__desc">Поможем разобраться, какая программа и формат обучения подойдут вашему ребенку. Расскажем про расписание, подход школы и что важно на старте. Если вы рассматриваете поступление, объясним этапы: с чего начать, какие документы понадобятся и как проходит знакомство со школой.</div>
+              <ol class="feedback__list">
+                <li>Оставляете заявку</li>
+                <li>Консультация или школьный тур</li>
+                <li>Следующий шаг по поступлению</li>
+              </ol>
+            </div>
+            <div class="feedback__form form">
+              <div class="feedback__caption">Запишитесь на консультацию</div>
+              <form action="">
+                <div class="fieldset">
+                  <label class="label">
+                    <span>Имя</span>
+                    <input type="text" placeholder="Введите ваше имя">
+                  </label>
+                  <label class="label">
+                    <span>Фамилия</span>
+                    <input type="text" placeholder="Введите вашу фамилию">
+                  </label>
+                  <label class="label">
+                    <span>Номер</span>
+                    <input type="tel" placeholder="Введите ваш номер телефона">
+                  </label>
+                </div>
+                <button class="form-btn button button-primary"><span>Получить консультацию</span></button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="feedback__wrap">
+          <div class="feedback__items marquee">
+            <div class="feedback__item text-up">Prometheus — знания, которые открывают будущее</div>
+          </div>
+          <div aria-hidden="true" class="feedback__items marquee">
+            <div class="feedback__item text-up">Prometheus — знания, которые открывают будущее</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  @@include('html/head.html', { "title": "Кружки и секции" })
+  <body>
+    @@include('html/header.html', { "class": "light" })
+
+    <main>
+      <section class="hero-blue hero-clubs section-hidden">
+        <div class="container">
+          <div class="hero-blue__container">
+            <h1 class="hero-blue__title">Кружки и секции</h1>
+          </div>
+        </div>
+      </section>
+      <section class="clubs section-hidden">
+        <div class="container">
+          <div class="clubs__container">
+            <div class="clubs__tabs tabs">
+              <ul data-tabs class="tabs__list">
+                <li><a data-tabby-default href="#clubs-1">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 7V21" stroke="#22326E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 18C2.73478 18 2.48043 17.8946 2.29289 17.7071C2.10536 17.5196 2 17.2652 2 17V4C2 3.73478 2.10536 3.48043 2.29289 3.29289C2.48043 3.10536 2.73478 3 3 3H8C9.06087 3 10.0783 3.42143 10.8284 4.17157C11.5786 4.92172 12 5.93913 12 7C12 5.93913 12.4214 4.92172 13.1716 4.17157C13.9217 3.42143 14.9391 3 16 3H21C21.2652 3 21.5196 3.10536 21.7071 3.29289C21.8946 3.48043 22 3.73478 22 4V17C22 17.2652 21.8946 17.5196 21.7071 17.7071C21.5196 17.8946 21.2652 18 21 18H15C14.2044 18 13.4413 18.3161 12.8787 18.8787C12.3161 19.4413 12 20.2044 12 21C12 20.2044 11.6839 19.4413 11.1213 18.8787C10.5587 18.3161 9.79565 18 9 18H3Z" stroke="#22326E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>STEM</span>
+                </a></li>
+                <li><a href="#clubs-2">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_77_7171)">
+                    <path d="M14.3996 14.4L9.59961 9.59998" stroke="#22326E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18.6574 21.485C18.2824 21.8602 17.7737 22.071 17.2432 22.0711C16.7128 22.0712 16.204 21.8605 15.8289 21.4855C15.4537 21.1105 15.2429 20.6018 15.2428 20.0714C15.2427 19.5409 15.4534 19.0322 15.8284 18.657L14.0614 20.425C13.6862 20.8002 13.1774 21.0109 12.6469 21.0109C12.1163 21.0109 11.6075 20.8002 11.2324 20.425C10.8572 20.0499 10.6465 19.5411 10.6465 19.0105C10.6465 18.48 10.8572 17.9712 11.2324 17.596L17.5964 11.232C17.9715 10.8569 18.4803 10.6461 19.0109 10.6461C19.5414 10.6461 20.0502 10.8569 20.4254 11.232C20.8005 11.6072 21.0113 12.116 21.0113 12.6465C21.0113 13.1771 20.8005 13.6859 20.4254 14.061L18.6574 15.828C19.0325 15.453 19.5413 15.2424 20.0717 15.2425C20.6022 15.2426 21.1109 15.4534 21.4859 15.8285C21.8609 16.2037 22.0715 16.7124 22.0714 17.2429C22.0713 17.7733 21.8605 18.282 21.4854 18.657L18.6574 21.485Z" stroke="#22326E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21.4996 21.5L20.0996 20.1" stroke="#22326E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.9 3.9L2.5 2.5" stroke="#22326E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.40474 12.768C6.02959 13.1432 5.52078 13.3539 4.99024 13.3539C4.4597 13.3539 3.95089 13.1432 3.57574 12.768C3.20059 12.3929 2.98983 11.884 2.98983 11.3535C2.98983 10.823 3.20059 10.3142 3.57574 9.93901L5.34374 8.17201C5.15798 8.3577 4.93747 8.50498 4.6948 8.60545C4.45212 8.70592 4.19204 8.7576 3.92939 8.75756C3.39894 8.75746 2.89026 8.54666 2.51524 8.17151C2.32955 7.98575 2.18227 7.76524 2.0818 7.52257C1.98133 7.27989 1.92964 7.0198 1.92969 6.75715C1.92978 6.22671 2.14059 5.71802 2.51574 5.34301L5.34374 2.51501C5.71876 2.13986 6.22744 1.92905 6.75789 1.92896C7.02054 1.92891 7.28062 1.9806 7.5233 2.08106C7.76597 2.18153 7.98648 2.32882 8.17224 2.51451C8.35799 2.7002 8.50536 2.92065 8.60591 3.16329C8.70647 3.40593 8.75824 3.666 8.75829 3.92865C8.75834 4.1913 8.70665 4.45139 8.60618 4.69407C8.50571 4.93674 8.35843 5.15725 8.17274 5.34301L9.93974 3.57501C10.3149 3.19986 10.8237 2.9891 11.3542 2.9891C11.8848 2.9891 12.3936 3.19986 12.7687 3.57501C13.1439 3.95016 13.3546 4.45897 13.3546 4.98951C13.3546 5.52005 13.1439 6.02886 12.7687 6.40401L6.40474 12.768Z" stroke="#22326E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_77_7171">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                  <span>Спорт</span>
+                </a></li>
+                <li><a href="#clubs-3">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.54 15H17C16.4696 15 15.9609 15.2107 15.5858 15.5858C15.2107 15.9609 15 16.4696 15 17V21.54" stroke="#22326E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7 3.33997V4.99997C7 5.79562 7.31607 6.55868 7.87868 7.12129C8.44129 7.6839 9.20435 7.99997 10 7.99997C10.5304 7.99997 11.0391 8.21068 11.4142 8.58575C11.7893 8.96083 12 9.46953 12 9.99997C12 11.1 12.9 12 14 12C14.5304 12 15.0391 11.7893 15.4142 11.4142C15.7893 11.0391 16 10.5304 16 9.99997C16 8.89997 16.9 7.99997 18 7.99997H21.17" stroke="#22326E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.0008 21.95V18C11.0008 17.4696 10.7901 16.9609 10.415 16.5858C10.0399 16.2107 9.53121 16 9.00078 16C8.47035 16 7.96164 15.7893 7.58657 15.4142C7.2115 15.0391 7.00078 14.5304 7.00078 14V13C7.00078 12.4696 6.79007 11.9609 6.415 11.5858C6.03992 11.2107 5.53121 11 5.00078 11H2.05078" stroke="#22326E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#22326E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Языки</span>
+                </a></li>
+                <li><a href="#clubs-4">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5 7C13.7761 7 14 6.77614 14 6.5C14 6.22386 13.7761 6 13.5 6C13.2239 6 13 6.22386 13 6.5C13 6.77614 13.2239 7 13.5 7Z" fill="#22326E" stroke="#22326E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17.5 11C17.7761 11 18 10.7761 18 10.5C18 10.2239 17.7761 10 17.5 10C17.2239 10 17 10.2239 17 10.5C17 10.7761 17.2239 11 17.5 11Z" fill="#22326E" stroke="#22326E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.5 8C8.77614 8 9 7.77614 9 7.5C9 7.22386 8.77614 7 8.5 7C8.22386 7 8 7.22386 8 7.5C8 7.77614 8.22386 8 8.5 8Z" fill="#22326E" stroke="#22326E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.5 13C6.77614 13 7 12.7761 7 12.5C7 12.2239 6.77614 12 6.5 12C6.22386 12 6 12.2239 6 12.5C6 12.7761 6.22386 13 6.5 13Z" fill="#22326E" stroke="#22326E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C12.926 22 13.648 21.254 13.648 20.312C13.648 19.875 13.468 19.477 13.211 19.187C12.921 18.898 12.773 18.535 12.773 18.062C12.7692 17.8419 12.8098 17.6233 12.8922 17.4192C12.9747 17.2151 13.0975 17.0298 13.2531 16.8741C13.4088 16.7185 13.5941 16.5957 13.7982 16.5132C14.0023 16.4308 14.2209 16.3902 14.441 16.394H16.437C19.488 16.394 21.992 13.891 21.992 10.84C21.965 6.012 17.461 2 12 2Z" stroke="#22326E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Творчество</span>
+                </a></li>
+              </ul>
+              <div class="tabs__contents clubs__contents">
+                <div id="clubs-1" class="clubs__box" data-lenis-prevent>
+                  <div class="clubs__wrap">
+                    <div class="clubs__content">
+                      <h2 class="clubs__title color-blue">Шахматы</h2>
+                      <div class="clubs__txt">Погружение в мир инженерии и программирования через создание роботов. От простых механизмов до сложных автономных систем.</div>
+                      <ul class="clubs__list">
+                        <li>Развитие инженерного мышления и навыков программирования</li>
+                        <li>Участие в международных соревнованиях по робототехнике</li>
+                        <li>Работа с профессиональным оборудованием и технологиями</li>
+                      </ul>
+                      <ul class="clubs__feature color-blue">
+                        <li>8-16 лет</li>
+                        <li>2 раза/нед</li>
+                        <li>Проектная работа</li>
+                      </ul>
+                      <a class="clubs__btn button button-primary button-arrow">
+                        <span>Записаться на консультацию</span>
+                        <div class="icon">
+                          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.57501 17.325L17.325 1.57495M17.325 1.57495H1.57501M17.325 1.57495V17.325" stroke="white" stroke-width="3.15" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="clubs__img"><img src="@img/clubs-img-1.webp" alt=""></div>
+                  </div>
+                  <div class="clubs__wrap">
+                    <div class="clubs__content">
+                      <h2 class="clubs__title color-blue">Робототехника</h2>
+                      <div class="clubs__txt">Погружение в мир инженерии и программирования через создание роботов. От простых механизмов до сложных автономных систем.</div>
+                      <ul class="clubs__list">
+                        <li>Развитие инженерного мышления и навыков программирования</li>
+                        <li>Участие в международных соревнованиях по робототехнике</li>
+                        <li>Работа с профессиональным оборудованием и технологиями</li>
+                      </ul>
+                      <ul class="clubs__feature color-blue">
+                        <li>8-16 лет</li>
+                        <li>2 раза/нед</li>
+                        <li>Проектная работа</li>
+                      </ul>
+                      <a class="clubs__btn button button-primary button-arrow">
+                        <span>Записаться на консультацию</span>
+                        <div class="icon">
+                          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.57501 17.325L17.325 1.57495M17.325 1.57495H1.57501M17.325 1.57495V17.325" stroke="white" stroke-width="3.15" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="clubs__img"><img src="@img/clubs-img-2.webp" alt=""></div>
+                  </div>
+                </div>
+                <div id="clubs-2" class="clubs__box" data-lenis-prevent>...</div>
+                <div id="clubs-3" class="clubs__box" data-lenis-prevent>...</div>
+                <div id="clubs-4" class="clubs__box" data-lenis-prevent>...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

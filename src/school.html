@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  @@include('html/head.html', { "title": "Школьная программа" })
+  <body>
+    @@include('html/header.html', { "class": "light" })
+
+    <main>
+      <section class="hero-blue hero-school section-hidden">
+        <div class="container">
+          <div class="hero-blue__container">
+            <h1 class="hero-blue__title">Школьная программа</h1>
+          </div>
+        </div>
+      </section>
+      <section class="school-page section-pad-top section-hidden">
+        <div class="container">
+          <div class="school-page__container">
+            <div class="school-page__tabs tabs">
+              <ul data-tabs class="tabs__list texp-up">
+                <li><a data-tabby-default href="#school-1">pre-school</a></li>
+                <li><a href="#school-2">начальная школа</a></li>
+                <li><a href="#school-3">среднее звено</a></li>
+                <li><a href="#school-4">старшее звено</a></li>
+              </ul>
+              <div class="tabs__contents school-page__contents">
+                <div id="school-1" class="school-page__box">
+                  <div class="school-page__content">
+                    <div class="school-page__wrap">
+                      <video autoplay muted loop class="back-video">
+                        <source src="/files/school-1.mp4" type="video/mp4">
+                      </video>
+                      <!-- если нет видео выводить картинку -->
+                      <!-- <img src="@img/school-img-3.gif" alt=""> -->
+                      <h2 class="school-page__title color-blue">Дошкольное отделение</h2>
+                      <a class="school-page__btn button button-primary button-arrow">
+                        <span>Записаться на консультацию</span>
+                        <div class="icon">
+                          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.57501 17.325L17.325 1.57495M17.325 1.57495H1.57501M17.325 1.57495V17.325" stroke="white" stroke-width="3.15" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="school-page__desc">
+                      <p>Дошкольное отделение в Prometheus School помогает ребенку мягко адаптироваться к обучению: через игру, исследование и творческие задания мы развиваем речь, внимание, логику и самостоятельность. Главная цель не “нагрузить”, а сформировать уверенную базу и интерес к знаниям.</p>
+                      <strong>Чему научится ребенок:</strong>
+                      <ul>
+                        <li>Говорить увереннее, расширить словарный запас и понимать инструкции</li>
+                        <li>Развивать внимание, память, логику, базовые математические представления</li>
+                        <li>Тренировать мелкую моторику и подготовку руки к письму</li>
+                      </ul>
+                      <strong>Формат и подход:</strong>
+                      <ul>
+                        <li>Занятия короткими блоками, смена активностей каждые 10–15 минут</li>
+                        <li>Игровые сценарии + мини-проекты (поделки, наблюдения, эксперименты)</li>
+                        <li>Обратная связь для родителей: сильные стороны и зоны роста</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div id="school-2" class="school-page__box">
+                  <div class="school-page__content">
+                    <div class="school-page__wrap">
+                      <video autoplay muted loop class="back-video">
+                        <source src="/files/school-2.mp4" type="video/mp4">
+                      </video>
+                      <!-- если нет видео выводить картинку -->
+                      <!-- <img src="@img/school-img-4.gif" alt=""> -->
+                      <h2 class="school-page__title color-blue">Начальная школа</h2>
+                      <a href="" class="school-page__btn button button-primary button-arrow">
+                        <span>Записаться на консультацию</span>
+                        <div class="icon">
+                          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.57501 17.325L17.325 1.57495M17.325 1.57495H1.57501M17.325 1.57495V17.325" stroke="white" stroke-width="3.15" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="school-page__desc">
+                      <p>Начальная школа строится вокруг крепкой академической базы и привычки учиться. Мы развиваем грамотность, математику и английский, а также учим ребенка мыслить, задавать вопросы и доводить задания до результата. Важная часть программы: проектный подход и развитие soft skills.</p>
+                      <strong>Чему научится ребенок:</strong>
+                      <ul>
+                        <li>Читать осмысленно, писать грамотно, уверенно выражать мысли</li>
+                        <li>Освоить математику без “зазубривания” через понимание и практику</li>
+                        <li>Формировать ответственность: планирование, аккуратность, самостоятельность</li>
+                      </ul>
+                      <strong>Формат и подход:</strong>
+                      <ul>
+                        <li>Понятная структура: теория, практика, закрепление, мини-проект</li>
+                        <li>Регулярная диагностика прогресса и рекомендации по развитию</li>
+                        <li>Поддержка интереса через интерактив, задания на реальную жизнь</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div id="school-3" class="school-page__box">
+                  <div class="school-page__content">
+                    <div class="school-page__wrap">
+                      <video autoplay muted loop class="back-video">
+                        <source src="/files/school-3.mp4" type="video/mp4">
+                      </video>
+                      <!-- если нет видео выводить картинку -->
+                      <!-- <img src="@img/school-img-5.gif" alt=""> -->
+                      <h2 class="school-page__title color-blue">Среднее звено</h2>
+                      <a href="" class="school-page__btn button button-primary button-arrow">
+                        <span>Записаться на консультацию</span>
+                        <div class="icon">
+                          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.57501 17.325L17.325 1.57495M17.325 1.57495H1.57501M17.325 1.57495V17.325" stroke="white" stroke-width="3.15" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="school-page__desc">
+                      <p>В среднем звене мы делаем переход от “учусь потому что сказали” к “понимаю зачем и как”. Ребята учатся работать с информацией, аргументировать, делать исследования и применять знания в проектах. Появляется больше самостоятельности и выбор траекторий.</p>
+                      <strong>Чему научится ребенок:</strong>
+                      <ul>
+                        <li>Анализировать и структурировать информацию, делать выводы</li>
+                        <li>Писать и выступать: аргументация, дебаты, презентации</li>
+                        <li>Осваивать навыки self-management: дедлайны, ответственность, фокус</li>
+                      </ul>
+                      <strong>Формат и подход:</strong>
+                      <ul>
+                        <li>Проектные модули и исследовательские задания</li>
+                        <li>Командная работа и развитие критического мышления</li>
+                        <li>Регулярная обратная связь: не оценки ради оценки, а рост компетенций</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div id="school-4" class="school-page__box">
+                  <div class="school-page__content">
+                    <div class="school-page__wrap">
+                      <video autoplay muted loop class="back-video">
+                        <source src="/files/school-4.mp4" type="video/mp4">
+                      </video>
+                      <!-- если нет видео выводить картинку -->
+                      <!-- <img src="@img/school-img-6.gif" alt=""> -->
+                      <h2 class="school-page__title color-blue">Старшее звено</h2>
+                      <a href="" class="school-page__btn button button-primary button-arrow">
+                        <span>Записаться на консультацию</span>
+                        <div class="icon">
+                          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.57501 17.325L17.325 1.57495M17.325 1.57495H1.57501M17.325 1.57495V17.325" stroke="white" stroke-width="3.15" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="school-page__desc">
+                      <p>Старшее звено направлено на осознанный выбор будущей траектории: подготовка к поступлению, углубление в профильные предметы и развитие навыков взрослой самостоятельности. Мы помогаем выстроить сильное портфолио, уверенно сдавать экзамены и планировать следующий шаг после школы.</p>
+                      <strong>Чему научится ребенок:</strong>
+                      <ul>
+                        <li>Углубленно работать с профильными предметами и задачами повышенной сложности</li>
+                        <li>Собирать портфолио: проекты, достижения, волонтерство, активности</li>
+                        <li>Понимать свои сильные стороны и выстраивать карьерный фокус</li>
+                      </ul>
+                      <strong>Формат и подход:</strong>
+                      <ul>
+                        <li>Индивидуальная траектория и сопровождение по выбору направления</li>
+                        <li>Консультации по поступлению и подготовке</li>
+                        <li>Проекты и практические задания, которые можно показывать как результат</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

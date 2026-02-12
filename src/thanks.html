@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  @@include('html/head.html', { "title": "Спасибо! Заявка отправлена" })
+  <body>
+    @@include('html/header.html', { "class": "" })
+
+    <main>
+      <section class="hero hero-thanks thanks section-hidden">
+        <div class="container">
+          <div class="hero__container thanks__container">
+            <img class="hero__bg" src="@img/thanks.webp" alt="" />
+            <div class="thanks__row">
+              <div class="thanks__icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M43.6012 20C44.5146 24.4826 43.8637 29.1428 41.7569 33.2036C39.6502 37.2643 36.215 40.4801 32.0242 42.3146C27.8335 44.1491 23.1405 44.4915 18.7278 43.2847C14.3152 42.0779 10.4496 39.3948 7.77577 35.6828C5.10194 31.9709 3.78147 27.4545 4.03455 22.8868C4.28763 18.319 6.09898 13.9762 9.16652 10.5823C12.2341 7.18848 16.3724 4.94884 20.8914 4.23689C25.4103 3.52493 30.0368 4.3837 33.9992 6.66998" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18 22L24 28L44 8" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="thanks__group">
+                <h1 class="thanks__title">Спасибо! Заявка отправлена</h1>
+                <div class="thanks__desc">Мы свяжемся с вами в ближайшее время и уточним детали.</div>
+              </div>
+            </div>
+            <div class="thanks__buttons">
+              <a href="tour.html" class="thanks__btn button button-primary"><span>Посмотреть школьный тур</span></a>
+              <a href="/" class="thanks__btn button-light"><span>На главную</span></a>
+            </div>
+          </div>
+          <div class="thanks__wrap">
+            <div class="thanks__row">
+              <div class="thanks__icon">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.21732 23.3332C11.444 24.4755 14.0054 24.7848 16.44 24.2056C18.8746 23.6264 21.0223 22.1967 22.496 20.1741C23.9698 18.1515 24.6726 15.6691 24.478 13.1741C24.2834 10.6791 23.204 8.33569 21.4344 6.56612C19.6649 4.79654 17.3214 3.71719 14.8265 3.52254C12.3315 3.3279 9.84903 4.03078 7.82644 5.50451C5.80385 6.97825 4.37412 9.12592 3.79491 11.5605C3.2157 13.9951 3.52508 16.5566 4.66732 18.7832L2.33398 25.6666L9.21732 23.3332Z" stroke="#F8F9FB" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="thanks__group">
+                <h2 class="thanks__caption">Нужен быстрый ответ?</h2>
+                <div class="thanks__desc">Напишите нам в WhatsApp, ответим быстрее.</div>
+              </div>
+            </div>
+            <a href="#" class="thanks__btn button-light" target="_blank"><span>Написать в WhatsApp</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

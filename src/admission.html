@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  @@include('html/head.html', { "title": "Поступление" })
+  <body>
+    @@include('html/header.html', { "class": "" })
+
+    <main>
+      <section class="hero hero-admission section-hidden">
+        <div class="container">
+          <div class="hero__container">
+            <!-- Приоритет на видео -->
+            <video autoplay muted loop class="back-video">
+              <source src="/files/hero.mp4" type="video/mp4">
+            </video>
+            <!-- Если видео не загрузили то выводить фото -->
+            <!-- <img class="hero__bg" src="@img/hero.gif" alt="" /> -->
+            <div class="hero__row">
+              <div class="hero__group">
+                <h1 class="hero__title">Начните путь в Prometheus School уже сегодня</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="admission section-pad-top section-hidden">
+        <div class="container">
+          <div class="admission__container">
+            <div class="admission__row">
+              <div class="admission__left admission__left_1">
+                <img src="@img/admission-img.webp" alt="">
+                <h2 class="admission__title">Как поступить</h2>
+              </div>
+              <div class="admission__cards">
+                <div class="admission__grid">
+                  <div class="admission__card admission-card">
+                    <div class="admission-card__caption color-blue">Возраст</div>
+                    <div class="admission-card__txt">Возраст ребёнка соответствует выбранной образовательной программе.</div>
+                  </div>
+                  <div class="admission__card admission-card">
+                    <div class="admission-card__caption color-blue">Оценка уровня</div>
+                    <div class="admission-card__txt">Короткое собеседование или тест для понимания знаний и интересов.</div>
+                  </div>
+                </div>
+                <div class="admission__card admission-card admission-card-lg">
+                  <div class="admission-card__caption color-blue">Документы</div>
+                  <div class="admission-card__txt">Заполнение анкеты и предоставление необходимых документов для оформления поступления.</div>
+                  <a href="" class="admission-card__btn button button-primary button-arrow">
+                    <span>Оставить заявку</span>
+                    <div class="icon">
+                      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.57501 17.325L17.325 1.57495M17.325 1.57495H1.57501M17.325 1.57495V17.325" stroke="white" stroke-width="3.15" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="admission__row">
+              <div class="admission__left admission__left_2">
+                <h2 class="admission__title">Сроки поступления</h2>
+              </div>
+              <div class="admission__cards">
+                <div class="admission__card admission-card">
+                  <div class="admission-card__caption color-blue">Pre-school и начальная школа:</div>
+                  <div class="admission-card__txt">Набор круглый год, набор на новый учебный год — до конца августа</div>
+                </div>
+                <div class="admission__card admission-card">
+                  <div class="admission-card__caption color-blue">Среднее и старшее звено:</div>
+                  <div class="admission-card__txt">Набор до конца июня, с ориентацией на начало учебного года</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="road section-pad-top section-hidden">
+        <div class="container">
+          <div class="road__container">
+            <img class="back" src="@img/road-img.webp" alt="">
+            <div class="road__subtitle">Дальше важно родителям</div>
+            <h2 class="road__title">Путь к поступлению</h2>
+            <div class="road__steps">
+              <div class="road__step road-step">
+                <div class="road-step__icon"><img src="@img/road-step-1.svg" alt=""></div>
+                <div class="road-step__caption">Заявка</div>
+              </div>
+              <div class="road__step road-step">
+                <div class="road-step__icon"><img src="@img/road-step-2.svg" alt=""></div>
+                <div class="road-step__caption">Консультация</div>
+              </div>
+              <div class="road__step road-step">
+                <div class="road-step__icon"><img src="@img/road-step-3.svg" alt=""></div>
+                <div class="road-step__caption">Зачисление</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="admission-parent section-pad section-hidden">
+        <div class="container">
+          <div class="admission-parent__container">
+            <div class="admission-parent__content">
+              <h2 class="admission-parent__title color-blue">Родителям</h2>
+              <div class="admission-parent__desc">Мы понимаем важность выбора школы и готовы поддержать вас на каждом этапе образовательного пути вашего ребенка.</div>
+            </div>
+            <div class="admission-parent__cards">
+              <div class="admission-parent__card">
+                <div class="admission-parent__icon"><img src="@img/admission-icon-1.svg" alt=""></div>
+                <div class="admission-parent__caption color-blue">Индивидуальная траектория</div>
+                <div class="admission-parent__txt">Мы учитываем сильные стороны и интересы каждого ученика для эффективного обучения.</div>
+              </div>
+              <div class="admission-parent__card">
+                <div class="admission-parent__icon"><img src="@img/admission-icon-2.svg" alt=""></div>
+                <div class="admission-parent__caption color-blue">Сильная база</div>
+                <div class="admission-parent__txt">Фундаментальные знания и критическое мышление для успеха в любой области.</div>
+              </div>
+              <div class="admission-parent__card">
+                <div class="admission-parent__icon"><img src="@img/admission-icon-3.svg" alt=""></div>
+                <div class="admission-parent__caption color-blue">Проектная практика</div>
+                <div class="admission-parent__txt">Реальные проекты помогают применять знания на практике и развивать навыки.</div>
+              </div>
+              <div class="admission-parent__card">
+                <div class="admission-parent__icon"><img src="@img/admission-icon-4.svg" alt=""></div>
+                <div class="admission-parent__caption color-blue">Поддержка родителей</div>
+                <div class="admission-parent__txt">Мы вовлекаем родителей в процесс для создания эффективной образовательной среды.</div>
+              </div>
+              <div class="admission-parent__card">
+                <div class="admission-parent__icon"><img src="@img/admission-icon-5.svg" alt=""></div>
+                <div class="admission-parent__caption color-blue">Безопасная среда</div>
+                <div class="admission-parent__txt">Комфортная атмосфера, где дети могут свободно выражать себя и развиваться.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

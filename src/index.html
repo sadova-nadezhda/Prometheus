@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  @@include('html/head.html', { "title": "Главная" })
+  <body>
+    @@include('html/header.html', { "class": "" })
+
+    <main>
+      <section class="hero hero-home section-hidden">
+        <div class="container">
+          <div class="hero__container">
+            <!-- Приоритет на видео -->
+            <video autoplay muted loop class="back-video">
+              <source src="/files/hero.mp4" type="video/mp4">
+            </video>
+            <!-- Если видео не загрузили то выводить фото -->
+            <!-- <img class="hero__bg" src="@img/hero.gif" alt="" /> -->
+            <div class="hero__row">
+              <div class="hero__group">
+                <h1 class="hero__title">Будущее начинается здесь и сейчас</h1>
+                <a href="" class="hero__btn button button-primary"><span>Оставить заявку</span></a>
+              </div>
+              <div class="hero__slider">
+                <div class="swiper heroSwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide hero__slide">
+                      <div class="hero__caption">Раскрой потенциал</div>
+                      <div class="hero__txt">Образование будущего с акцентом на таланты, навыки и ценности.</div>
+                    </div>
+                    <div class="swiper-slide hero__slide">
+                      <div class="hero__caption">Учись с лидерами</div>
+                      <div class="hero__txt">STEM, языки, лидерство и подготовка к вузам под одной крышей.</div>
+                    </div>
+                    <div class="swiper-slide hero__slide">
+                      <div class="hero__caption">Школа будущего</div>
+                      <div class="hero__txt">Комфортные лаборатории, инновационные программы.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about about-home section-hidden">
+        <div class="about__container">
+          <img src="@img/about-img.webp" alt="">
+          <svg class="back-top" width="1440" height="218" viewBox="0 0 1440 218" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1439 0C1439.55 7.21559e-06 1440 0.44772 1440 1C1440 13.7025 1429.7 24 1417 24H867C839.386 24 817 46.3858 817 74V106C817 118.15 807.15 128 795 128H674C651.909 128 634 145.909 634 168C634 195.614 611.614 218 584 218H50C22.3858 218 0 195.614 0 168V2C0 0.895431 0.895431 2.61729e-08 2 0H1439Z" fill="white"/>
+          </svg>
+          <h2 class="about__title"><strong>Современная частная школа</strong> в Алматы с международными методиками, академической глубиной и <strong>индивидуальным подходом</strong></h2>
+          <div class="about__group">
+            <div class="about__txt">Школа с комфортной инфраструктурой, современными лабораториями, проектными классами и англоязычными программами, где дети учатся в атмосфере вдохновения, раскрывают таланты и обретают уверенность</div>
+            <a href="" class="about__btn button button-primary button-arrow">
+              <span>Подробнее</span>
+              <div class="icon">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.57501 17.325L17.325 1.57495M17.325 1.57495H1.57501M17.325 1.57495V17.325" stroke="white" stroke-width="3.15" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </a>
+          </div>
+          <svg class="back-bottom" width="1440" height="198" viewBox="0 0 1440 198" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1440 196C1440 197.105 1439.1 198 1438 198H1C0.447721 198 1.61069e-08 197.552 0 197C0 184.297 10.2975 174 23 174H856C883.614 174 906 151.614 906 124V50C906 22.3858 928.386 0 956 0H1390C1417.61 0 1440 22.3858 1440 50V196Z" fill="white"/>
+          </svg>
+        </div>
+      </section>
+      <section class="school school-home section-hidden">
+        <div class="container">
+          <div class="school__container">
+            <div class="school__wrap">
+              <div class="school__folder">
+                <!-- Приоритет на видео -->
+                <video autoplay muted loop class="back-video">
+                  <source src="/files/school-1.mp4" type="video/mp4">
+                </video>
+                <!-- Если видео не загрузили то выводить фото -->
+                <!-- <img src="@img/school-img.gif" alt=""> -->
+                <div class="school__num">01.</div>
+                <div class="school__content">
+                  <h2 class="school__title">Начальная школа</h2>
+                  <div class="school__desc"><strong>В начальной школе</strong> ребёнок получает сильную базу: чтение, математика, английский по National Geographic, <strong>логика</strong>, первые шаги в <strong>робототехнике</strong> и <strong>проектных заданиях.</strong> Главная цель — развить любознательность, уверенность и умение <strong>учиться с интересом.</strong></div>
+                  <div class="school__group">
+                    <span>Что изучают:</span>
+                    <ul class="school__list">
+                      <li>Фундаментальные академические знания</li>
+                      <li>National Geographic English</li>
+                      <li>Олимпиадная математика</li>
+                      <li>Робототехника и программирование</li>
+                      <li>DarynGO</li>
+                      <li>Booky-Wooky</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="school__folder">
+                <!-- Приоритет на видео -->
+                <video autoplay muted loop class="back-video">
+                  <source src="/files/school-2.mp4" type="video/mp4">
+                </video>
+                <!-- Если видео не загрузили то выводить фото -->
+                <!-- <img src="@img/school-img.gif" alt=""> -->
+                <div class="school__num">02.</div>
+                <div class="school__content">
+                  <h2 class="school__title">Среднее звено</h2>
+                  <div class="school__desc"><strong>В средней школе</strong> ученики переходят от базы к <strong>системному пониманию</strong>: углубляют <strong>математику</strong> и <strong>естественные науки</strong>, развивают грамотность, учатся работать с информацией и <strong>аргументировать свою позицию.</strong> Появляется больше практики: <strong>проекты и исследования</strong>, командная работа и первые осознанные выборы интересов. Главная цель — сформировать устойчивые учебные навыки, ответственность и уверенность в своих сильных сторонах.</div>
+                  <div class="school__group">
+                    <span>Что изучают:</span>
+                    <ul class="school__list">
+                      <li>Фундаментальные академические знания</li>
+                      <li>National Geographic English</li>
+                      <li>Олимпиадная математика</li>
+                      <li>Робототехника и программирование</li>
+                      <li>DarynGO</li>
+                      <li>Booky-Wooky</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="school__folder is-active">
+                <!-- Приоритет на видео -->
+                <video autoplay muted loop class="back-video">
+                  <source src="/files/school-3.mp4" type="video/mp4">
+                </video>
+                <!-- Если видео не загрузили то выводить фото -->
+                <!-- <img src="@img/school-img.gif" alt=""> -->
+                <div class="school__num">03.</div>
+                <div class="school__content">
+                  <h2 class="school__title">Старшее звено</h2>
+                  <div class="school__desc"><strong>В средней школе</strong> ученики переходят от базы к <strong>системному пониманию</strong>: углубляют <strong>математику</strong> и <strong>естественные науки</strong>, развивают грамотность, учатся работать с информацией и <strong>аргументировать свою позицию.</strong> Появляется больше практики: <strong>проекты и исследования</strong>, командная работа и первые осознанные выборы интересов. Главная цель — сформировать устойчивые учебные навыки, ответственность и уверенность в своих сильных сторонах.</div>
+                  <div class="school__group">
+                    <span>Что изучают:</span>
+                    <ul class="school__list">
+                      <li>Фундаментальные академические знания</li>
+                      <li>National Geographic English</li>
+                      <li>Олимпиадная математика</li>
+                      <li>Робототехника и программирование</li>
+                      <li>DarynGO</li>
+                      <li>Booky-Wooky</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/feedback.html')
+      <section class="tour section-hidden">
+        <div class="container">
+          <div class="tour__container">
+            <div class="tour__grid">
+              <div class="tour__card tour-card">
+                <img class="tour-card__img" src="@img/tour-img-1.webp" alt="">
+                <!-- Выводить если есть -->
+                <div class="tour-card__group">
+                  <h2 class="tour-card__caption">Тур по школе с дроном</h2>
+                  <a href="" class="tour-card__button button-light">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8 19V5L19 12L8 19Z" fill="white"/>
+                    </svg>
+                    <span>Смотреть</span>
+                  </a>
+                </div>
+              </div>
+              <div class="tour__card tour-card">
+                <img class="tour-card__img" src="@img/tour-img-2.webp" alt="">
+                <!-- Выводить если есть -->
+                <div class="tour-card__group">
+                  <h2 class="tour-card__caption">Школьный тур</h2>
+                  <a href="" class="tour-card__button button-light">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8 19V5L19 12L8 19Z" fill="white"/>
+                    </svg>
+                    <span>Смотреть</span>
+                  </a>
+                </div>
+              </div>
+              <div class="tour__card tour-card">
+                <img class="tour-card__img" src="@img/about-img.webp" alt="">
+              </div>
+              <div class="tour__card tour-card">
+                <img class="tour-card__img" src="@img/tour-img-3.webp" alt="">
+              </div>
+              <div class="tour__card tour-card">
+                <img class="tour-card__img" src="@img/about-img.webp" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="partners section-pad section-hidden">
+        <div class="container">
+          <div class="partners__container">
+            <div class="partners__wrap">
+              <h2 class="partners__title color-blue">Партнёры</h2>
+              <div class="partners__txt">Надёжные партнёры Prometheu, с которыми мы создаём ценность и развиваем проекты вместе.</div>
+            </div>
+            <div class="partners__slider">
+              <div class="swiper partnersSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide partners__slide"><img src="@img/partners-logo.svg" alt=""></div>
+                  <div class="swiper-slide partners__slide"><img src="@img/partners-logo.svg" alt=""></div>
+                  <div class="swiper-slide partners__slide"><img src="@img/partners-logo.svg" alt=""></div>
+                  <div class="swiper-slide partners__slide"><img src="@img/partners-logo.svg" alt=""></div>
+                  <div class="swiper-slide partners__slide"><img src="@img/partners-logo.svg" alt=""></div>
+                  <div class="swiper-slide partners__slide"><img src="@img/partners-logo.svg" alt=""></div>
+                  <div class="swiper-slide partners__slide"><img src="@img/partners-logo.svg" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/modals.html')
+    @@include('html/footer.html')
+    @@include('html/foot.html')
+  </body>
+</html>

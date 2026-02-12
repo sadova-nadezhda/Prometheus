@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  @@include('html/head.html', { "title": "История" })
+  <body>
+    @@include('html/header.html', { "class": "light" })
+
+    <main>
+      <section class="hero-blue hero-history section-hidden">
+        <div class="container">
+          <div class="hero-blue__container">
+            <h1 class="hero-blue__title">История</h1>
+          </div>
+        </div>
+      </section>
+      <section class="history section-pad section-hidden">
+        <div class="container">
+          <div class="history__container">
+            <div class="history__timeline timeline" id="historyTimeline" aria-label="История по годам">
+              <button class="timeline__btn is-active" type="button" data-slide="0">2021</button>
+              <button class="timeline__btn" type="button" data-slide="1">2022</button>
+              <button class="timeline__btn" type="button" data-slide="2">2023</button>
+              <button class="timeline__btn" type="button" data-slide="3">2024</button>
+              <button class="timeline__btn" type="button" data-slide="4">2025</button>
+              <button class="timeline__btn" type="button" data-slide="5">2026</button>
+            </div>
+            <div class="swiper historySwiper" id="historySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <article class="history__wrap">
+                    <h2 class="history__title text-up color-blue">2021 — первые результаты и рост</h2>
+                    <div class="history__grid">
+                      <img src="@img/thanks.webp" alt="">
+                      <div class="history__desc">
+                        <h3>Prometheus School появилась в 2021 году из простой, но дерзкой идеи: школа должна готовить не к экзаменам, а к жизни в будущем.</h3>
+                        <p>Мы укрепили программу и выстроили устойчивые учебные процессы: расписание, контроль качества, обратную связь. Школа начала расти, появились первые сильные кейсы учеников и заметные результаты в учебе. </p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <article class="history__wrap reverse">
+                    <h2 class="history__title text-up color-blue">2022 — развитие среды и школЫ</h2>
+                    <div class="history__grid">
+                      <img src="@img/achievements.webp" alt="">
+                      <div class="history__desc">
+                        <h3>Prometheus School появилась в 2021 году из простой, но дерзкой идеи: школа должна готовить не к экзаменам, а к жизни в будущем.</h3>
+                        <p>Мы укрепили программу и выстроили устойчивые учебные процессы: расписание, контроль качества, обратную связь. Школа начала расти, появились первые сильные кейсы учеников и заметные результаты в учебе. </p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <article class="history__wrap">
+                    <h2 class="history__title text-up color-blue">2023 — фокус на качество </h2>
+                    <div class="history__grid">
+                      <img src="@img/thanks.webp" alt="">
+                      <div class="history__desc">
+                        <h3>Prometheus School появилась в 2021 году из простой, но дерзкой идеи: школа должна готовить не к экзаменам, а к жизни в будущем.</h3>
+                        <p>Мы укрепили программу и выстроили устойчивые учебные процессы: расписание, контроль качества, обратную связь. Школа начала расти, появились первые сильные кейсы учеников и заметные результаты в учебе. </p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <article class="history__wrap reverse">
+                    <h2 class="history__title text-up color-blue">2024 — РЕЗУЛЬТАТЫ И РОСТ</h2>
+                    <div class="history__grid">
+                      <img src="@img/achievements.webp" alt="">
+                      <div class="history__desc">
+                        <h3>Prometheus School появилась в 2021 году из простой, но дерзкой идеи: школа должна готовить не к экзаменам, а к жизни в будущем.</h3>
+                        <p>Мы укрепили программу и выстроили устойчивые учебные процессы: расписание, контроль качества, обратную связь. Школа начала расти, появились первые сильные кейсы учеников и заметные результаты в учебе. </p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <article class="history__wrap">
+                    <h2 class="history__title text-up color-blue">2025 — РЕЗУЛЬТАТЫ И РОСТ</h2>
+                    <div class="history__grid">
+                      <img src="@img/thanks.webp" alt="">
+                      <div class="history__desc">
+                        <h3>Prometheus School появилась в 2021 году из простой, но дерзкой идеи: школа должна готовить не к экзаменам, а к жизни в будущем.</h3>
+                        <p>Мы укрепили программу и выстроили устойчивые учебные процессы: расписание, контроль качества, обратную связь. Школа начала расти, появились первые сильные кейсы учеников и заметные результаты в учебе. </p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <article class="history__wrap reverse">
+                    <h2 class="history__title text-up color-blue">2026 — РЕЗУЛЬТАТЫ И РОСТ</h2>
+                    <div class="history__grid">
+                      <img src="@img/achievements.webp" alt="">
+                      <div class="history__desc">
+                        <h3>Prometheus School появилась в 2021 году из простой, но дерзкой идеи: школа должна готовить не к экзаменам, а к жизни в будущем.</h3>
+                        <p>Мы укрепили программу и выстроили устойчивые учебные процессы: расписание, контроль качества, обратную связь. Школа начала расти, появились первые сильные кейсы учеников и заметные результаты в учебе. </p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

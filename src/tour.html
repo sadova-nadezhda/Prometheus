@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  @@include('html/head.html', { "title": "Школьный тур" })
+  <body>
+    @@include('html/header.html', { "class": "light" })
+
+    <main>
+      <section class="hero-blue hero-tour section-hidden">
+        <div class="container">
+          <div class="hero-blue__container">
+            <h1 class="hero-blue__title">Школьный тур</h1>
+          </div>
+        </div>
+      </section>
+      <section class="tour-page section-pad section-hidden">
+        <div class="container">
+          <div class="tour-page__container">
+            <div class="tour-page__wrap">
+              <img src="@img/about-img.webp" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>
