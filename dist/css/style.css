@@ -433,6 +433,14 @@ body.no-scroll {
   transform: translateY(-50%) rotate(-90deg);
 }
 
+.header__link {
+  transition: color 0.3s ease-out;
+}
+
+.header__link:hover {
+  color: var(--yellow, #F0B323);
+}
+
 .header__submenu {
   display: flex;
   flex-direction: column;
@@ -822,14 +830,16 @@ body.no-scroll {
   line-height: 1;
 }
 
-.footer__contacts a {
+.footer__contacts a span {
   position: relative;
+  width: -moz-max-content;
+  width: max-content;
 }
 
-.footer__contacts a::after {
+.footer__contacts a span::after {
   content: "";
   position: absolute;
-  top: 100%;
+  top: calc(100% + 2px);
   left: 0;
   width: 0;
   height: 1px;
@@ -837,7 +847,7 @@ body.no-scroll {
   transition: width 0.3s ease-out;
 }
 
-.footer__contacts a:hover::after {
+.footer__contacts a:hover span::after {
   width: 100%;
 }
 
