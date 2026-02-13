@@ -2732,6 +2732,12 @@ body.no-scroll {
   grid-row: span 2;
   border-radius: calc(20 * var(--width-multiplier));
   overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+}
+
+.life__item:hover {
+  transform: scale(0.95);
 }
 
 .life__item img {
@@ -2740,6 +2746,56 @@ body.no-scroll {
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+}
+
+.life__item.video {
+  position: relative;
+}
+
+.life__item.video::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(72 * var(--width-multiplier));
+  height: calc(48 * var(--width-multiplier));
+  border-radius: calc(200 * var(--width-multiplier));
+  border: 1px solid var(--white, #FFFFFF);
+  background: url(../img/play.svg) center/calc(24 * var(--width-multiplier)) no-repeat;
+  background-color: rgba(189, 173, 173, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  transition: transform 0.3s ease-out;
+}
+
+.life__item.video:hover::before {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.life__item .video-tag {
+  position: absolute;
+  top: calc(16 * var(--width-multiplier));
+  right: calc(16 * var(--width-multiplier));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(8 * var(--width-multiplier));
+  width: -moz-max-content;
+  width: max-content;
+  padding: calc(8 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
+  border-radius: calc(200 * var(--width-multiplier));
+  color: var(--white, #FFFFFF);
+  background: rgba(0, 0, 0, 0.7);
+  font-size: calc(12 * var(--width-multiplier));
+  font-weight: 500;
+}
+
+.life__item .video-tag svg {
+  display: block;
+  width: calc(14 * var(--width-multiplier));
+  height: calc(14 * var(--width-multiplier));
+  pointer-events: none;
 }
 
 .life__item:nth-child(10n+2) {
@@ -3378,6 +3434,75 @@ body.no-scroll {
   text-align: center;
 }
 
+.modal-life {
+  max-width: calc(1024 * var(--width-multiplier));
+}
+
+.modal-life__container {
+  position: relative;
+  border-radius: calc(20 * var(--width-multiplier));
+  overflow: hidden;
+}
+
+.modal-life__close {
+  position: absolute;
+  top: calc(24 * var(--width-multiplier));
+  right: calc(24 * var(--width-multiplier));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(40 * var(--width-multiplier));
+  height: calc(40 * var(--width-multiplier));
+  border-radius: 100%;
+  background-color: rgb(248, 249, 251);
+}
+
+.modal-life__close svg {
+  display: block;
+  width: calc(24 * var(--width-multiplier));
+  height: calc(24 * var(--width-multiplier));
+  pointer-events: none;
+}
+
+.modal-life__wrap {
+  display: grid;
+  grid-template-columns: 1fr calc(340 * var(--width-multiplier));
+}
+
+.modal-life__img {
+  height: calc(600 * var(--width-multiplier));
+}
+
+.modal-life__img img,
+.modal-life__img video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.modal-life__content {
+  padding: calc(24 * var(--width-multiplier));
+  padding-top: calc(88 * var(--width-multiplier));
+}
+
+.modal-life__caption {
+  margin-bottom: calc(8 * var(--width-multiplier));
+  text-align: start;
+}
+
+.modal-life__date {
+  margin-bottom: calc(24 * var(--width-multiplier));
+  color: rgba(0, 0, 0, 0.6);
+  font-size: calc(12 * var(--width-multiplier));
+}
+
+.modal-life__desc {
+  display: flex;
+  flex-direction: column;
+  gap: calc(16 * var(--width-multiplier));
+}
+
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -3601,7 +3726,7 @@ body.no-scroll {
   white-space: nowrap;
 }
 
-/* sticky__box */
+/* Widget */
 
 .sticky__box {
   position: fixed;
@@ -5003,6 +5128,26 @@ body.no-scroll {
 
   .modal__caption {
     font-size: calc(20 * var(--width-multiplier));
+  }
+
+  .modal-life__wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-life__img {
+    height: calc(300 * var(--width-multiplier));
+  }
+
+  .modal-life__content {
+    padding: calc(16 * var(--width-multiplier));
+  }
+
+  .modal-life__date {
+    margin-bottom: calc(16 * var(--width-multiplier));
+  }
+
+  .modal-life__desc {
+    font-size: calc(14 * var(--width-multiplier));
   }
 
   .cal__title {

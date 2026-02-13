@@ -8,11 +8,11 @@
   <link rel="shortcut icon" href="img/logo.png" type="image/png">
   <link
     rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css?_v=20260212161754"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css?_v=20260213131212"
   />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css?_v=20260212161754" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css?_v=20260212161754">
-  <link rel="stylesheet" href="css/style.css?_v=20260212161754" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css?_v=20260213131212" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css?_v=20260213131212">
+  <link rel="stylesheet" href="css/style.css?_v=20260213131212" />
 </head>
 
   <body>
@@ -222,12 +222,30 @@
         <div class="container">
           <div class="life__container">
             <div class="life__grid">
-              <div class="life__item"><img src="img/sch-life-1.webp" alt=""></div>
+              <div class="life__item video modal-btn" data-type="life">
+                <div class="video-tag">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.33398 7.58333L12.3807 9.61449C12.4247 9.64372 12.4757 9.66049 12.5284 9.66301C12.5811 9.66553 12.6335 9.65371 12.68 9.62881C12.7265 9.60391 12.7654 9.56685 12.7925 9.5216C12.8196 9.47635 12.834 9.42458 12.834 9.37183V4.59083C12.834 4.53951 12.8205 4.48909 12.7948 4.44467C12.7691 4.40025 12.7321 4.3634 12.6876 4.33783C12.6431 4.31227 12.5926 4.2989 12.5413 4.29907C12.49 4.29925 12.4396 4.31296 12.3953 4.33883L9.33398 6.12499" stroke="white" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.16602 3.5H2.33268C1.68835 3.5 1.16602 4.02233 1.16602 4.66667V9.33333C1.16602 9.97767 1.68835 10.5 2.33268 10.5H8.16602C8.81035 10.5 9.33268 9.97767 9.33268 9.33333V4.66667C9.33268 4.02233 8.81035 3.5 8.16602 3.5Z" stroke="white" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Видео
+                </div>
+                <img src="img/sch-life-1.webp" alt="">
+              </div>
               <div class="life__item"><img src="img/sch-life-2.webp" alt=""></div>
               <div class="life__item"><img src="img/sch-life-3.webp" alt=""></div>
               <div class="life__item"><img src="img/sch-life-4.webp" alt=""></div>
               <div class="life__item"><img src="img/sch-life-6.webp" alt=""></div>
-              <div class="life__item"><img src="img/sch-life-5.webp" alt=""></div>
+              <div class="life__item video">
+                <div class="video-tag">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.33398 7.58333L12.3807 9.61449C12.4247 9.64372 12.4757 9.66049 12.5284 9.66301C12.5811 9.66553 12.6335 9.65371 12.68 9.62881C12.7265 9.60391 12.7654 9.56685 12.7925 9.5216C12.8196 9.47635 12.834 9.42458 12.834 9.37183V4.59083C12.834 4.53951 12.8205 4.48909 12.7948 4.44467C12.7691 4.40025 12.7321 4.3634 12.6876 4.33783C12.6431 4.31227 12.5926 4.2989 12.5413 4.29907C12.49 4.29925 12.4396 4.31296 12.3953 4.33883L9.33398 6.12499" stroke="white" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.16602 3.5H2.33268C1.68835 3.5 1.16602 4.02233 1.16602 4.66667V9.33333C1.16602 9.97767 1.68835 10.5 2.33268 10.5H8.16602C8.81035 10.5 9.33268 9.97767 9.33268 9.33333V4.66667C9.33268 4.02233 8.81035 3.5 8.16602 3.5Z" stroke="white" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Видео
+                </div>
+                <img src="img/sch-life-5.webp" alt="">
+              </div>
               <div class="life__item"><img src="img/sch-life-1.webp" alt=""></div>
               <div class="life__item"><img src="img/sch-life-2.webp" alt=""></div>
               <div class="life__item"><img src="img/sch-life-3.webp" alt=""></div>
@@ -246,6 +264,62 @@
       </section>
     </main>
 
+    <div class="modals" data-lenis-prevent>
+  <div class="modal" data-type="call">
+    <div class="modal__container">
+      <button class="modal__close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="modal__caption">Заказать звонок</div>
+      <div class="modal__txt">Оставьте контакты, мы перезвоним в ближайшее время.</div>
+      <div class="modal__form form">
+        <form action="">
+          <div class="fieldset">
+            <label class="label">
+              <span>Имя</span>
+              <input type="text" placeholder="Введите ваше имя">
+            </label>
+            <label class="label">
+              <span>Номер</span>
+              <input type="tel" placeholder="Введите ваш номер телефона">
+            </label>
+          </div>
+          <button class="form-btn button button-primary"><span>Отправить</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal-life" data-type="life">
+    <div class="modal-life__container">
+      <button class="modal-life__close modal__close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18" stroke="#22326E" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6 6L18 18" stroke="#22326E" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="modal-life__wrap">
+        <!-- выводить или фото или видео -->
+        <!-- <div class="modal-life__img"><img src="img/about-img.webp" alt=""></div> -->
+         <div class="modal-life__img">
+            <video controls>
+              <source src="/files/school-4.mp4" type="video/mp4">
+              Ваш браузер не поддерживает встроенные видео
+            </video>
+         </div>
+        <div class="modal-life__content">
+          <div class="modal-life__caption modal__caption color-blue">Спортивный зал</div>
+          <div class="modal-life__date">14 янв 2026</div>
+          <div class="modal-life__desc">
+            <p>Просторный зал для баскетбола, волейбола и других видов спорта</p>
+            <p>Это мероприятие стало важной частью нашей школьной жизни и помогло ученикам развить новые навыки, укрепить командный дух и получить незабываемые впечатления.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     <footer class="footer">
   <div class="container">
     <div class="footer__container">
@@ -329,12 +403,12 @@
   </div>
 </footer>
  
-    <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js?_v=20260212161754"></script> 
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js?_v=20260212161754"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js?_v=20260212161754"></script>
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js?_v=20260212161754"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js?_v=20260212161754"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js?_v=20260212161754"></script>
-<script src="js/app.js?_v=20260212161754"></script>
+    <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js?_v=20260213131212"></script> 
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js?_v=20260213131212"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js?_v=20260213131212"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js?_v=20260213131212"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js?_v=20260213131212"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js?_v=20260213131212"></script>
+<script src="js/app.js?_v=20260213131212"></script>
   </body>
 </html>
